@@ -1,0 +1,14 @@
+[package]
+name = "prefixtree"
+version = "0.0.1"
+authors = ["Vee Satayamas <vsatayamas@gmail.com>"]
+description = "Hash-table-based prefix tree library"
+homepage = "https://gitlab.com/veer66/prefixtree"
+repository = "https://gitlab.com/veer66/prefixtree.git"
+readme = "README.md"
+keywords = ["text", "library"]
+license = "LGPL-3.0"
+
+[lib]
+
+[dependencies]
