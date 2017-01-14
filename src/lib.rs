@@ -1,11 +1,11 @@
 use std::collections::HashMap;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct PrefixTree<T> {
     tab: HashMap<(u32,u32,char),(u32,bool,Option<T>)>
 }
 
-impl<T: Copy+Clone> PrefixTree<T> {
+impl<T: Clone> PrefixTree<T> {
     pub fn new(sorted_word_list_with_payload: &[(&str,T)]) -> PrefixTree<T> {
         let mut tab: HashMap<(u32,u32,char),(u32,bool,Option<T>)> = HashMap::new();
         let word_list_len = sorted_word_list_with_payload.len();
