@@ -5,9 +5,9 @@ pub struct PrefixTree<T> {
     tab: HashMap<(u32,u32,char),(u32,bool,Option<T>)>
 }
 
-impl<T: Clone> PrefixTree<T> {
+impl<T: Copy+Clone> PrefixTree<T> {
     pub fn new(sorted_word_list_with_payload: &[(&str,T)]) -> PrefixTree<T> {
-        let mut tab = HashMap::new();
+        let mut tab: HashMap<(u32,u32,char),(u32,bool,Option<T>)> = HashMap::new();
         let word_list_len = sorted_word_list_with_payload.len();
         for i in 0..word_list_len {
             let (ref word, ref payload) = sorted_word_list_with_payload[i];
@@ -29,15 +29,10 @@ impl<T: Clone> PrefixTree<T> {
                 row_no = _row_no;
             }            
         }
-        PrefixTree{tab: tab}        
+        PrefixTree{tab: tab}
     }
 
     pub fn seek(&self, key: &(u32,u32,char)) -> Option<&(u32,bool,Option<T>)> {
         self.tab.get(key)
-        //     Some(&(next_row, is_terminal, ref payload)) => {
-        //         &Some((next_row, is_terminal, payload.clone()))
-        //     },
-        //     None => &None
-        // }
     }
 }

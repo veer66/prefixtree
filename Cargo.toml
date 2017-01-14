@@ -1,6 +1,6 @@
 [package]
 name = "prefixtree"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["Vee Satayamas <vsatayamas@gmail.com>"]
 description = "Hash-table-based prefix tree library"
 homepage = "https://gitlab.com/veer66/prefixtree"
