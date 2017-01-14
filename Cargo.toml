@@ -8,8 +8,6 @@ repository = "https://gitlab.com/veer66/prefixtree.git"
 readme = "README.md"
 keywords = ["text", "library"]
 license = "LGPL-3.0"
-homepage = "https://gitlab.com/veer66/prefixtree"
-repository = "https://gitlab.com/veer66/prefixtree.git"
 
 [lib]
 
