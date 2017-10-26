@@ -4,7 +4,7 @@ use std::cmp::Eq;
 
 #[derive(Debug, Clone)]
 pub struct PrefixTree<Elem,Payload> where Elem: Hash + Eq + Clone {
-    tab: HashMap<(u32,u32,Elem),(u32,bool,Option<Payload>)>
+    pub tab: HashMap<(u32,u32,Elem),(u32,bool,Option<Payload>)>
 }
 
 impl<Elem: Hash+Eq+Clone, Payload: Clone> PrefixTree<Elem, Payload> {
