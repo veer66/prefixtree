@@ -1,3 +1,5 @@
+# Moved to [https://codeberg.org/veer66/chamkho](https://codeberg.org/veer66/chamkho)
+
 prefixtree
 ==========
 
